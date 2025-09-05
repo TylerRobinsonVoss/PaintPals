@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Paint Pals</title>
+    <meta name="description" content="Terms and conditions for using Paint Pals drawing and coloring app.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --text-primary: #2d3436;
+            --text-secondary: #636e72;
+            --bg-light: #f8f9fa;
+            --card-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            --border-radius: 24px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            color: var(--text-primary);
+            background: #fff;
+            line-height: 1.8;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #667eea08 0%, #764ba208 100%);
+            padding: 40px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(245, 87, 108, 0.1);
+            border-radius: 50%;
+            top: -150px;
+            left: -50px;
+            filter: blur(40px);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-content {
+            text-align: center;
+        }
+
+        .logo-link {
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .app-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .last-updated {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        /* Navigation */
+        .nav-tabs {
+            background: white;
+            padding: 20px 0;
+            border-bottom: 1px solid #e9ecef;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+            position: relative;
+            padding-bottom: 5px;
+        }
+
+        .nav-link.active {
+            color: #667eea;
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -21px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--primary-gradient);
+        }
+
+        .nav-link:hover {
+            color: #667eea;
+        }
+
+        /* Content */
+        .content {
+            padding: 60px 0;
+        }
+
+        .section {
+            margin-bottom: 50px;
+            background: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f1f3f5;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        ul {
+            margin-left: 25px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea08 0%, #764ba208 100%);
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            color: var(--text-primary);
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe0e0 100%);
+            border-left: 4px solid #f5576c;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+
+        .warning-box p {
+            margin-bottom: 0;
+            color: var(--text-primary);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .contact-section h2 {
+            color: white;
+            border-bottom: none;
+            margin-bottom: 15px;
+        }
+
+        .contact-section p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 20px;
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 15px 35px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        /* Table of Contents */
+        .toc {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 16px;
+            margin-bottom: 40px;
+        }
+
+        .toc h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+
+        .toc ol {
+            margin-left: 25px;
+        }
+
+        .toc li {
+            margin-bottom: 8px;
+        }
+
+        .toc a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .toc a:hover {
+            color: #667eea;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .copyright {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .nav-container {
+                gap: 20px;
+                padding: 0 20px;
+            }
+
+            .nav-link {
+                font-size: 1rem;
+            }
+
+            .section {
+                padding: 25px;
+                border-radius: 16px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo-link">
+                    <img src="logo.png" alt="Paint Pals" class="app-logo">
+                </a>
+                <h1>Terms of Service</h1>
+                <p class="last-updated">Effective Date: January 2025</p>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Content -->
+    <main class="content">
+        <div class="container">
+            <div class="highlight-box">
+                <p><strong>Welcome to Paint Pals!</strong> By using our app, you agree to these terms. We've written them in plain language to make them easy to understand. If you have any questions, please contact us.</p>
+            </div>
+
+            <!-- Table of Contents -->
+            <div class="toc">
+                <h3>Quick Navigation</h3>
+                <ol>
+                    <li><a href="#acceptance">Acceptance of Terms</a></li>
+                    <li><a href="#account">Your Account</a></li>
+                    <li><a href="#usage">Acceptable Use</a></li>
+                    <li><a href="#content">Content & Ownership</a></li>
+                    <li><a href="#ai">AI Features</a></li>
+                    <li><a href="#multiplayer">Multiplayer Guidelines</a></li>
+                    <li><a href="#purchases">Purchases & Subscriptions</a></li>
+                    <li><a href="#termination">Termination</a></li>
+                    <li><a href="#disclaimer">Disclaimers</a></li>
+                    <li><a href="#contact">Contact Information</a></li>
+                </ol>
+            </div>
+
+            <section class="section" id="acceptance">
+                <h2>1. Acceptance of Terms</h2>
+                <p>By downloading, installing, or using Paint Pals ("the App"), you agree to be bound by these Terms of Service ("Terms"). If you don't agree to these Terms, please don't use our App.</p>
+                
+                <h3>Age Requirements</h3>
+                <ul>
+                    <li>Paint Pals is available to users of all ages</li>
+                    <li>Users under 13 must have parental consent to create an account</li>
+                    <li>Users between 13-18 should review these Terms with a parent or guardian</li>
+                </ul>
+            </section>
+
+            <section class="section" id="account">
+                <h2>2. Your Account</h2>
+                
+                <h3>Account Creation</h3>
+                <p>To access certain features, you may need to create an account. When you do:</p>
+                <ul>
+                    <li>Provide accurate and complete information</li>
+                    <li>Keep your account credentials secure</li>
+                    <li>Notify us immediately of any unauthorized access</li>
+                    <li>You're responsible for all activity under your account</li>
+                </ul>
+
+                <h3>Account Types</h3>
+                <ul>
+                    <li><strong>Free Account:</strong> Access to basic features and limited cloud storage</li>
+                    <li><strong>Premium Account:</strong> Unlimited storage, exclusive brushes, and priority support</li>
+                    <li><strong>Family Account:</strong> Multiple user profiles with parental controls</li>
+                </ul>
+            </section>
+
+            <section class="section" id="usage">
+                <h2>3. Acceptable Use</h2>
+                
+                <p>Paint Pals is designed to be a positive, creative space. You agree NOT to:</p>
+                
+                <h3>Prohibited Activities</h3>
+                <ul>
+                    <li>Create or share inappropriate, offensive, or harmful content</li>
+                    <li>Harass, bully, or intimidate other users</li>
+                    <li>Impersonate others or misrepresent your identity</li>
+                    <li>Use the App for any illegal purposes</li>
+                    <li>Attempt to hack, reverse engineer, or damage the App</li>
+                    <li>Violate any third-party rights, including copyright and privacy</li>
+                    <li>Use automated systems or bots without permission</li>
+                    <li>Spam or send unsolicited messages to other users</li>
+                </ul>
+
+                <div class="warning-box">
+                    <p><strong>Violation Consequences:</strong> Violation of these rules may result in warnings, temporary suspension, or permanent account termination at our discretion.</p>
+                </div>
+            </section>
+
+            <section class="section" id="content">
+                <h2>4. Content & Ownership</h2>
+                
+                <h3>Your Content</h3>
+                <p>You retain ownership of the artwork you create in Paint Pals. By using the App, you grant us:</p>
+                <ul>
+                    <li>A license to store, display, and sync your content across your devices</li>
+                    <li>Permission to use anonymized artwork data to improve our AI features</li>
+                    <li>The right to showcase publicly shared artwork in our gallery or promotions (with attribution)</li>
+                </ul>
+
+                <h3>Our Content</h3>
+                <p>Paint Pals and its original content, features, and functionality are owned by us and are protected by international copyright, trademark, and other intellectual property laws.</p>
+
+                <h3>User-Generated Content Guidelines</h3>
+                <p>When sharing artwork publicly, you confirm that:</p>
+                <ul>
+                    <li>The content is your original creation or you have permission to share it</li>
+                    <li>It doesn't violate any third-party rights</li>
+                    <li>It's appropriate for all ages</li>
+                    <li>You accept that other users may view and be inspired by your public artwork</li>
+                </ul>
+            </section>
+
+            <section class="section" id="ai">
+                <h2>5. AI Features</h2>
+                
+                <h3>AI Art Generation</h3>
+                <p>Our AI-powered features are provided "as-is" with the following understanding:</p>
+                <ul>
+                    <li>AI-generated content may not always meet your expectations</li>
+                    <li>We don't guarantee the uniqueness of AI-generated artwork</li>
+                    <li>AI features may be updated or modified over time</li>
+                    <li>You're responsible for reviewing AI-generated content before sharing</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <p><strong>AI Content Rights:</strong> You own the rights to artwork you create using our AI tools, subject to our license terms above.</p>
+                </div>
+            </section>
+
+            <section class="section" id="multiplayer">
+                <h2>6. Multiplayer Guidelines</h2>
+                
+                <h3>Collaborative Drawing</h3>
+                <p>When using multiplayer features:</p>
+                <ul>
+                    <li>Respect other users' contributions to shared canvases</li>
+                    <li>Follow our community guidelines for appropriate content</li>
+                    <li>Don't share personal information with strangers</li>
+                    <li>Report any inappropriate behavior immediately</li>
+                </ul>
+
+                <h3>Parental Controls</h3>
+                <p>Parents can:</p>
+                <ul>
+                    <li>Restrict multiplayer access for child accounts</li>
+                    <li>Approve friend requests</li>
+                    <li>Monitor drawing sessions</li>
+                    <li>Set time limits for app usage</li>
+                </ul>
+            </section>
+
+            <section class="section" id="purchases">
+                <h2>7. Purchases & Subscriptions</h2>
+                
+                <h3>In-App Purchases</h3>
+                <ul>
+                    <li>All purchases are processed through the Apple App Store</li>
+                    <li>Prices may vary by region and are subject to change</li>
+                    <li>Virtual items (brushes, colors, templates) are non-transferable</li>
+                </ul>
+
+                <h3>Premium Subscriptions</h3>
+                <ul>
+                    <li>Subscriptions auto-renew unless cancelled 24 hours before the renewal date</li>
+                    <li>Manage subscriptions through your App Store account settings</li>
+                    <li>No refunds for partial subscription periods</li>
+                    <li>Free trials convert to paid subscriptions unless cancelled</li>
+                </ul>
+
+                <h3>Refund Policy</h3>
+                <p>Refunds are handled according to Apple's App Store policies. For subscription issues, contact our support team for assistance.</p>
+            </section>
+
+            <section class="section" id="termination">
+                <h2>8. Termination</h2>
+                
+                <h3>Your Rights</h3>
+                <p>You can stop using Paint Pals and delete your account at any time through the app settings.</p>
+
+                <h3>Our Rights</h3>
+                <p>We may suspend or terminate your account if:</p>
+                <ul>
+                    <li>You violate these Terms or our Community Guidelines</li>
+                    <li>Your account is inactive for an extended period (12+ months)</li>
+                    <li>Required by law or court order</li>
+                    <li>We discontinue the service</li>
+                </ul>
+
+                <h3>Effect of Termination</h3>
+                <p>Upon termination:</p>
+                <ul>
+                    <li>Your right to use the App ceases immediately</li>
+                    <li>We may delete your account data after 30 days</li>
+                    <li>You can export your artwork before account deletion</li>
+                    <li>Provisions that should survive termination will remain in effect</li>
+                </ul>
+            </section>
+
+            <section class="section" id="disclaimer">
+                <h2>9. Disclaimers & Limitations</h2>
+                
+                <h3>Service Availability</h3>
+                <p>Paint Pals is provided "as is" and "as available." We don't guarantee that:</p>
+                <ul>
+                    <li>The App will be uninterrupted or error-free</li>
+                    <li>Defects will be corrected immediately</li>
+                    <li>The App is free of viruses or harmful components</li>
+                    <li>Results will meet your specific requirements</li>
+                </ul>
+
+                <h3>Limitation of Liability</h3>
+                <p>To the maximum extent permitted by law, we shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use or inability to use the App.</p>
+
+                <h3>Indemnification</h3>
+                <p>You agree to defend, indemnify, and hold us harmless from any claims, damages, or expenses arising from your use of Paint Pals or violation of these Terms.</p>
+            </section>
+
+            <section class="section">
+                <h2>10. General Provisions</h2>
+                
+                <h3>Changes to Terms</h3>
+                <p>We may update these Terms from time to time. We'll notify you of significant changes through:</p>
+                <ul>
+                    <li>In-app notifications</li>
+                    <li>Email (if you've opted in)</li>
+                    <li>App Store update notes</li>
+                </ul>
+
+                <h3>Governing Law</h3>
+                <p>These Terms are governed by the laws of the United States and the State of California, without regard to conflict of law provisions.</p>
+
+                <h3>Dispute Resolution</h3>
+                <p>Any disputes arising from these Terms will be resolved through binding arbitration in accordance with the American Arbitration Association rules.</p>
+
+                <h3>Severability</h3>
+                <p>If any provision of these Terms is found to be unenforceable, the remaining provisions will continue in full force and effect.</p>
+
+                <h3>Entire Agreement</h3>
+                <p>These Terms, along with our Privacy Policy, constitute the entire agreement between you and Paint Pals.</p>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="mailto:support@paintpalsapp.com">Support</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Paint Pals. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
